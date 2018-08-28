@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/mainwindow">
+        <file>selected.png</file>
+        <file>mainwindowtile.png</file>
+        <file>cameraoff.png</file>
+        <file>cameraon.png</file>
+    </qresource>
+</RCC>

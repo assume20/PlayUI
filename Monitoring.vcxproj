@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3D9FDAE7-D61C-30D5-B723-47C78DB238BB}</ProjectGuid>
+    <RootNamespace>Monitoring</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>..\bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>Monitoring</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>..\bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>Monitoring</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Monitoring</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Monitoring</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;D:\opencv\build\include;$(QTDIR)\include;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;release;$(QTDIR)\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;QT_NO_DEBUG;QT_MULTIMEDIAWIDGETS_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\qtmain.lib;shell32.lib;D:\opencv\build\x64\vc14\lib\opencv_world341.lib;.\lib\IPCameraDll.lib;.\lib\LEJP.lib;$(QTDIR)\lib\Qt5MultimediaWidgets.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Multimedia.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Network.lib;$(QTDIR)\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\utils\my_sql\my_sql\lib;C:\utils\postgresql\pgsql\lib;$(QTDIR)\lib;D:\opencv\build\x64\vc14\lib;.\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\Monitoring.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;QT_NO_DEBUG;QT_MULTIMEDIAWIDGETS_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <InputFile>%(FullPath)</InputFile>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <Define>UNICODE;WIN32;WIN64;QT_NO_DEBUG;QT_MULTIMEDIAWIDGETS_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;_MSC_VER=1900;_WIN32;_WIN64</Define>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;$(QTDIR)\mkspecs/win32-msvc2015;.;D:/opencv/build/include;$(QTDIR)\include;$(QTDIR)\include/QtMultimediaWidgets;$(QTDIR)\include/QtWidgets;$(QTDIR)\include/QtMultimedia;$(QTDIR)\include/QtGui;$(QTDIR)\include/QtANGLE;$(QTDIR)\include/QtNetwork;$(QTDIR)\include/QtCore</IncludePath>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>resources</InitFuncName>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <Compression>default</Compression>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+      <InputFile>%(FullPath)</InputFile>
+    </QtRcc>
+    <QtUic>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+      <InputFile>%(FullPath)</InputFile>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;D:\opencv\build\include;$(QTDIR)\include;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;debug;$(QTDIR)\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;QT_MULTIMEDIAWIDGETS_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\qtmaind.lib;shell32.lib;D:\opencv\build\x64\vc14\lib\opencv_world341d.lib;.\lib\IPCameraDll_d.lib;.\lib\LEJP_d.lib;$(QTDIR)\lib\Qt5MultimediaWidgetsd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Multimediad.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\utils\my_sql\my_sql\lib;C:\utils\postgresql\pgsql\lib;$(QTDIR)\lib;D:\opencv\build\x64\vc14\lib;.\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\Monitoring.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;QT_MULTIMEDIAWIDGETS_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <InputFile>%(FullPath)</InputFile>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <Define>UNICODE;WIN32;WIN64;QT_MULTIMEDIAWIDGETS_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;_MSC_VER=1900;_WIN32;_WIN64</Define>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;$(QTDIR)\mkspecs/win32-msvc2015;.;D:/opencv/build/include;$(QTDIR)\include;$(QTDIR)\include/QtMultimediaWidgets;$(QTDIR)\include/QtWidgets;$(QTDIR)\include/QtMultimedia;$(QTDIR)\include/QtGui;$(QTDIR)\include/QtANGLE;$(QTDIR)\include/QtNetwork;$(QTDIR)\include/QtCore</IncludePath>
+    </QtMoc>
+    <QtUic>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+      <InputFile>%(FullPath)</InputFile>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <Compression>default</Compression>
+      <InitFuncName>resources</InitFuncName>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+      <InputFile>%(FullPath)</InputFile>
+      <QTDIR>$(QTDIR)</QTDIR>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="addlabel.cpp" />
+    <ClCompile Include="centralwin.cpp" />
+    <ClCompile Include="display.cpp" />
+    <ClCompile Include="global.cpp" />
+    <ClCompile Include="ipportinfo.cpp" />
+    <ClCompile Include="labelmodify.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="playerlist.cpp" />
+    <ClCompile Include="thread.cpp" />
+    <ClCompile Include="thread_localinfo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="addlabel.h">
+    </QtMoc>
+    <QtMoc Include="centralwin.h">
+    </QtMoc>
+    <QtMoc Include="display.h">
+    </QtMoc>
+    <ClInclude Include="global.h" />
+    <QtMoc Include="ipportinfo.h">
+    </QtMoc>
+    <QtMoc Include="labelmodify.h">
+    </QtMoc>
+    <QtMoc Include="mainwindow.h">
+    </QtMoc>
+    <QtMoc Include="playerlist.h">
+    </QtMoc>
+    <QtMoc Include="thread.h">
+    </QtMoc>
+    <ClInclude Include="thread_localinfo.h" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="addlabel.ui">
+    </QtUic>
+    <QtUic Include="centerwin.ui">
+    </QtUic>
+    <QtUic Include="ipportinfo.ui">
+    </QtUic>
+    <QtUic Include="labDlg.ui">
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\cameraoff.png" />
+    <None Include="res\cameraon.png" />
+    <None Include="res\mainwindowtile.png" />
+    <QtRcc Include="res\resources.qrc">
+    </QtRcc>
+    <None Include="res\selected.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" Qt5Version_x0020_x64="msvc2015_64" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

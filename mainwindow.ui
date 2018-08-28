@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1101</width>
+    <height>717</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="act_label"/>
+    <addaction name="act_ipport"/>
+   </widget>
+   <widget class="QMenu" name="menu_view">
+    <property name="title">
+     <string>视图</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>播放</string>
+    </property>
+    <widget class="QMenu" name="menu_1">
+     <property name="title">
+      <string>切换1画面</string>
+     </property>
+     <addaction name="act_change_1_1"/>
+     <addaction name="act_change_1_2"/>
+     <addaction name="act_change_1_3"/>
+     <addaction name="act_change_1_4"/>
+     <addaction name="act_change_1_5"/>
+     <addaction name="act_change_1_6"/>
+     <addaction name="act_change_1_7"/>
+     <addaction name="act_change_1_8"/>
+     <addaction name="act_change_1_9"/>
+     <addaction name="act_change_1_10"/>
+     <addaction name="act_change_1_11"/>
+     <addaction name="act_change_1_12"/>
+     <addaction name="act_change_1_13"/>
+     <addaction name="act_change_1_14"/>
+     <addaction name="act_change_1_15"/>
+     <addaction name="act_change_1_16"/>
+    </widget>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>切换4画面</string>
+     </property>
+     <addaction name="act_change_4_1"/>
+     <addaction name="act_change_4_2"/>
+     <addaction name="act_change_4_3"/>
+     <addaction name="act_change_4_4"/>
+    </widget>
+    <widget class="QMenu" name="menu_9">
+     <property name="title">
+      <string>切换9画面</string>
+     </property>
+     <addaction name="act_change_9_1"/>
+     <addaction name="act_change_9_2"/>
+    </widget>
+    <addaction name="menu_1"/>
+    <addaction name="menu_4"/>
+    <addaction name="menu_9"/>
+    <addaction name="act_change16"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menu_view"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockWidgetPlayerList">
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents"/>
+  </widget>
+  <action name="act_label">
+   <property name="text">
+    <string>标签设置</string>
+   </property>
+  </action>
+  <action name="act_playlist">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>相机列表</string>
+   </property>
+  </action>
+  <action name="act_connect">
+   <property name="text">
+    <string>连接监控</string>
+   </property>
+  </action>
+  <action name="act_ipport">
+   <property name="text">
+    <string>监控设置</string>
+   </property>
+   <property name="iconText">
+    <string>监控设置</string>
+   </property>
+   <property name="toolTip">
+    <string>监控设置</string>
+   </property>
+  </action>
+  <action name="act_change16">
+   <property name="text">
+    <string>切换16画面</string>
+   </property>
+  </action>
+  <action name="act_change_1_1">
+   <property name="text">
+    <string>通道1</string>
+   </property>
+  </action>
+  <action name="act_change_1_2">
+   <property name="text">
+    <string>通道2</string>
+   </property>
+  </action>
+  <action name="act_change_1_3">
+   <property name="text">
+    <string>通道3</string>
+   </property>
+  </action>
+  <action name="act_change_1_4">
+   <property name="text">
+    <string>通道4</string>
+   </property>
+  </action>
+  <action name="act_change_1_5">
+   <property name="text">
+    <string>通道5</string>
+   </property>
+  </action>
+  <action name="act_change_1_6">
+   <property name="text">
+    <string>通道6</string>
+   </property>
+  </action>
+  <action name="act_change_1_7">
+   <property name="text">
+    <string>通道7</string>
+   </property>
+  </action>
+  <action name="act_change_1_8">
+   <property name="text">
+    <string>通道8</string>
+   </property>
+  </action>
+  <action name="act_change_1_9">
+   <property name="text">
+    <string>通道9</string>
+   </property>
+  </action>
+  <action name="act_change_1_10">
+   <property name="text">
+    <string>通道10</string>
+   </property>
+  </action>
+  <action name="act_change_1_11">
+   <property name="text">
+    <string>通道11</string>
+   </property>
+  </action>
+  <action name="act_change_1_12">
+   <property name="text">
+    <string>通道12</string>
+   </property>
+  </action>
+  <action name="act_change_1_13">
+   <property name="text">
+    <string>通道13</string>
+   </property>
+  </action>
+  <action name="act_change_1_14">
+   <property name="text">
+    <string>通道14</string>
+   </property>
+  </action>
+  <action name="act_change_1_15">
+   <property name="text">
+    <string>通道15</string>
+   </property>
+  </action>
+  <action name="actionA_9">
+   <property name="text">
+    <string>a</string>
+   </property>
+  </action>
+  <action name="act_change_1_16">
+   <property name="text">
+    <string>通道16</string>
+   </property>
+  </action>
+  <action name="actionA_11">
+   <property name="text">
+    <string>a</string>
+   </property>
+  </action>
+  <action name="actionA_12">
+   <property name="text">
+    <string>a</string>
+   </property>
+  </action>
+  <action name="actionA_13">
+   <property name="text">
+    <string>a</string>
+   </property>
+  </action>
+  <action name="actionA_14">
+   <property name="text">
+    <string>a</string>
+   </property>
+  </action>
+  <action name="actionA_15">
+   <property name="text">
+    <string>a</string>
+   </property>
+  </action>
+  <action name="actionA_16">
+   <property name="text">
+    <string>a</string>
+   </property>
+  </action>
+  <action name="act_change_4_1">
+   <property name="text">
+    <string>通道1-4</string>
+   </property>
+  </action>
+  <action name="act_change_4_2">
+   <property name="text">
+    <string>通道5-8</string>
+   </property>
+  </action>
+  <action name="act_change_4_3">
+   <property name="text">
+    <string>通道9-12</string>
+   </property>
+  </action>
+  <action name="act_change_4_4">
+   <property name="text">
+    <string>通道13-16</string>
+   </property>
+  </action>
+  <action name="act_change_9_1">
+   <property name="text">
+    <string>通道1-9</string>
+   </property>
+  </action>
+  <action name="act_change_9_2">
+   <property name="text">
+    <string>通道8-16</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

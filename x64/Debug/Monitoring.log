@@ -1,0 +1,19 @@
+﻿  Moc'ing centralwin.h...
+  Moc'ing display.h...
+  centralwin.cpp
+  display.cpp
+  ipportinfo.cpp
+  mainwindow.cpp
+e:\playui\centralwin.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 centralwin.cpp)
+e:\playui\centralwin.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 ipportinfo.cpp)
+e:\playui\centralwin.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 mainwindow.cpp)
+  thread.cpp
+e:\playui\centralwin.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 display.cpp)
+thread.cpp(36): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+e:\playui\centralwin.cpp(110): warning C4715: “Centralwin::getKey”: 不是所有的控件路径都返回值
+  moc_centralwin.cpp
+  moc_display.cpp
+  moc_ipportinfo.cpp
+e:\playui\generatedfiles\debug\../../centralwin.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 .\GeneratedFiles\Debug\moc_centralwin.cpp)
+e:\playui\centralwin.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 .\GeneratedFiles\Debug\moc_ipportinfo.cpp)
+  Monitoring.vcxproj -> E:\PlayUI\.\bin\Monitoring.exe

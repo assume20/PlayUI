@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Centerwin</class>
+ <widget class="QWidget" name="Centerwin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1123</width>
+    <height>749</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="lay_1">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="videowin1_1" native="true">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="videowin1_2" native="true">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="videowin1_3" native="true">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="videowin1_4" native="true">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="lay_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="videowin2_1" native="true"/>
+     </item>
+     <item>
+      <widget class="QWidget" name="videowin2_2" native="true">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="videowin2_3" native="true">
+       <zorder>videowin2_4</zorder>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="videowin2_4" native="true">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="lay_3">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="videowin3_1" native="true"/>
+     </item>
+     <item>
+      <widget class="QWidget" name="videowin3_2" native="true"/>
+     </item>
+     <item>
+      <widget class="QWidget" name="videowin3_3" native="true">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="videowin3_4" native="true">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="lay_4">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="videowin4_1" native="true">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="videowin4_2" native="true"/>
+     </item>
+     <item>
+      <widget class="QWidget" name="videowin4_3" native="true"/>
+     </item>
+     <item>
+      <widget class="QWidget" name="videowin4_4" native="true">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
